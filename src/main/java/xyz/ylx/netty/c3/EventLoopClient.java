@@ -49,14 +49,14 @@ public class EventLoopClient {
             }
         }, "input").start();
 
-        ChannelFuture closeFuture = channel.closeFuture();
+        // ChannelFuture closeFuture = channel.closeFuture();
         // System.out.println("waiting close");
         // closeFuture.sync();
         // log.debug("处理关闭之后的操作");
 
-        closeFuture.addListener((ChannelFutureListener) future -> {
-            log.debug("处理关闭之后的操作");
-            group.shutdownGracefully();
-        });
+        // closeFuture.addListener((ChannelFutureListener) future -> {
+        //     log.debug("处理关闭之后的操作");
+        //     group.shutdownGracefully();
+        // });
     }
 }
